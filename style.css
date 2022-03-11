@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    background: rgb(25,66,99);
+    background: linear-gradient(180deg, rgba(25,66,99,0.9318321078431373) 0%, rgba(25,66,99,0.9262298669467787) 48%, rgba(43,104,153,0.9542410714285714) 100%);
+}
+.container {
+    margin: 0 auto;
+    width: 1100px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    max-height: 150px;
+}
+.title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title {
+    font-family: 'Comfortaa', cursive;
+    font-size: 44px;
+    letter-spacing: 5px;
+}
+.logo-game {
+    margin-right: 15px;
+    width: 70px;
+}
+.score-table {
+    display: grid;
+    grid-template-columns: 110px auto;
+    grid-template-rows: repeat (2, 27px);
+}
+li {
+    width: 30px;
+    text-align: center;
+    list-style-type: none;
+}
+.lavel-container, .moves-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lavel-title, .moves-title {
+    font-weight: 700;
+}
+.main {
+    padding: 100px 0;
+    min-height: 700px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+}
+.moves-score {
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.memory-game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 505px;
+    perspective: 1000px;
+}
+.card-game {
+    position: relative;
+    width: 105px;
+    height: 100px;
+    margin: 5px;
+    cursor: pointer;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.4s;
+}
+.card-game:hover {
+    transform: scale(0.97);
+    transition: transform .4s;
+}
+.card-game.flip {
+    transform: rotateY(180deg);
+}
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background: #F27922;
+    backface-visibility: hidden;
+    transition: all 0.5s;
+}
+.front {
+    transform: rotateY(180deg);
+}
+.back {
+    padding: 22px;
+}
+.win {
+    position: absolute;
+    display: none;
+    width: 500px;
+    height: 400px;
+    background-image: url(./assets/win.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.footer {
+    display: flex;
+    height: 100px;
+}
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 100%;
+}
+.github-icon {
+    border-radius: 100%;
+    width: 35px;
+    transition: all 0.3s;
+}
+.github-icon:hover, .logo:hover {
+    transform: scale(1.2);
+}
+.logo {
+    width: 80px;
+    filter: invert(93%) sepia(100%) saturate(0%) hue-rotate(248deg) brightness(106%) contrast(106%);
+    transition: all 0.3s;
+}
+.year {
+    font-weight: bold;
+}
